@@ -3,9 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-import leaf from "../../Assets/Projects/Indegogo.PNG";
-import editor from "../../Assets/Projects/Bluemercurry.PNG";
-import chatify from "../../Assets/Projects/Agoda.PNG";
+import chatify from "../../Assets/Projects/hotel.png";
+import leaf from "../../Assets/Projects/angel.png";
+import editor from "../../Assets/Projects/glamm.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 function Projects() {
@@ -24,15 +24,27 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={5} className="project-card" data-aos="fade-down">
+            <ProjectCard
+              imgPath={editor}
+              isBlog={false}
+              title="My Glamm Clone"
+              description="MyGlamm is a direct-to-consumer beauty brand that offers an online beauty products marketplace."
+              link="https://github.com/tauseef-stack/myGlamm"
+              linkmedium="https://medium.com/@mahatoabhishek123/myglamm-com-a-cloned-version-703f06e7e9cf"
+              linklive="https://myglammclone.netlify.app"
+            />
+          </Col>
+          
           <Col md={5} className="project-card" data-aos="fade-right">
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Agoda Clone "
-              description="Agoda is an online travel agency and metasearch engine for hotels, vacation rentals, flights, and airport transfer. It was founded in 2003 and later acquired by Booking Holdings, becoming a subsidiary of the company."
-              link="https://github.com/Avinash7564/Agoda-Clone"
-              linkmedium="https://avinashrexx.hashnode.dev/cloning-of-agoda-website"
-              linklive="https://agoda.netlify.app/"
+              title="Hotels Clone "
+              description="Hotels.com is a leading provider of hotel accommodation worldwide, offering booking services through localized websites."
+              link="https://github.com/abhishekmah/Project-Hotels.com"
+              linkmedium="https://medium.com/@mahatoabhishek123/hotels-com-a-cloned-version-57165d6eef3f"
+              linklive="https://hotelsclone.netlify.app"
             />
           </Col>
 
@@ -40,11 +52,11 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Indiegogo Clone"
-              description="Indiegogo is a website which offers two types of functionalities Donation and Fund-Raising. If anyone have any creative idea then he/she can fill a form and get a donation from any users if anyone likes their ideas. "
-              link="https://github.com/Avinash7564/indiegogo-clone"
-              linkmedium="https://avinashrexx.hashnode.dev/indiegogo-clone"
-              linklive="https://indiegogo-clone.netlify.app"
+              title="AngelList Clone"
+              description="AngelList is a U.S. website for startups, angel investors, and job-seekers looking to work at startups."
+              link="https://github.com/vshubhams/project-angel"
+              linkmedium="https://medium.com/@mahatoabhishek123/a-cloned-version-of-angel-co-d7718733313c"
+              linklive="https://projectangel.netlify.app"
             />
           </Col>
 
@@ -52,13 +64,14 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Bluemercurry Clone"
-              description="A cloned web application of bluemercury.com, a US-based website that sells cosmetics products and provides a wide range of products to choose from"
-              link="https://github.com/Avinash7564/bluemercurry_clone"
-              linkmedium="https://avinashrexx.hashnode.dev/bluemercury-website-cloning"
-              linklive="https://bluemercurryclone.netlify.app"
+              title="My Glamm Clone"
+              description="MyGlamm is a direct-to-consumer beauty brand that offers an online beauty products marketplace."
+              link="https://github.com/tauseef-stack/myGlamm"
+              linkmedium="https://medium.com/@mahatoabhishek123/myglamm-com-a-cloned-version-703f06e7e9cf"
+              linklive="https://myglammclone.netlify.app"
             />
           </Col>
+          
         </Row>
       </Container>
     </Container>
