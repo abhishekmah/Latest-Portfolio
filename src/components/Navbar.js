@@ -101,7 +101,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://hashnode.com/@avinashrexx"
+                href="https://medium.com/@mahatoabhishek123"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -111,7 +111,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/Avinash7564"
+                href="https://github.com/abhishekmah"
                 target="_blank"
                 className="fork-btn-inner"
               >

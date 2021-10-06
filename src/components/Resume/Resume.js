@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Resumecontent from "./ResumeContent";
 import axios from "axios";
-import pdf from "../../Assets/Avinash_Kumar_Resume_03-09-2021-00-28-25.pdf";
+import pdf from "../../Assets/ABHISHEK_MAHATO  Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -50,15 +50,15 @@ function Resume() {
           <Col md={6} className="resume-left">
             <h3 className="resume-title">Training</h3>
             <Resumecontent
-              title="EOCL , Haldia, West Bengal"
+              title="TATA STEEL, Jamshedpur"
               date="June 2020"
               content={[
-                "Worked on processing fieldwork for various projects which comprise layout marking, Structural checking, on-site work overview.",
+                "Slag Granulation Tank Project & Undergone fieldwork at blast furnace",
               ]}
             />
             <h3 className="resume-title">Voluntary Experience</h3>
             <Resumecontent
-              title="Jigayasa"
+              title="Jigyasa"
               content={[
                 "Jigyasa is a NGO that provides free education to poor childrens in Haldia city. ",
               ]}
@@ -67,20 +67,28 @@ function Resume() {
           <Col md={6} className="resume-right">
             <h3 className="resume-title">Education</h3>
             <Resumecontent
+              title=" FULL STACK WEB DEVELOPMENT [ Masai School, Bangalore ] "
+              date="Mar 2021 - Oct 2021"
+              content={[]}
+            />
+            <br/>
+            <br/>
+            <br/>
+            <Resumecontent
               title=" B.Tech MECHANICAL ENGINEERING [ Haldia Institute of Technology, West Bengal ] "
               date="2016 - 2020"
-              content={["CGPA: 8.00"]}
+              content={["CGPA: 7.4"]}
             />
-            <Resumecontent
-              title="12TH BOARD [ Gyan Bharti Residential Complex, Gaya, Bihar ]"
+            {/* <Resumecontent
+              title="12TH BOARD [ D.A.V Public School, Bistupur, Jamshedpur ]"
               date="2013 - 2015"
-              content={["Precentage: 92.6%"]}
+              content={["Precentage: 65%"]}
             />
             <Resumecontent
-              title="10TH BOARD [ Manav Bharti National Complex, Gaya, Bihar ] "
+              title="10TH BOARD [ D.A.V Public School, Bistupur, Jamshedpur ] "
               date="2012 - 2013"
-              content={["Precentage: 9.8 CGPA"]}
-            />
+              content={["Precentage: 9.2 CGPA"]}
+            /> */}
             {/* <h3 className="resume-title">Ranks and Achivements</h3> */}
             {/* <Resumecontent
               title=""

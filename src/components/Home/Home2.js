@@ -8,7 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaLinkedinIn } from "react-icons/fa";
 import TransitionsModal from "../Modal/ContactModal.jsx";
-import avatarImg from "../../Assets/avatar.jpeg"
+import avatarImg from "../../Assets/abhi.jpg"
 function Home2() {
   useEffect(() => {
     Aos.init({ duration: 1200 });
@@ -22,8 +22,7 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body" data-aos="fade-up">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I love coding and I have keen interest in learning new Technologies… 🤷‍♂️
               <br />
               <br />I am fluent in classics like
               <i>
@@ -41,7 +40,7 @@ function Home2() {
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
+              Whenever possible, I also love developing products
               with <b className="purple">Node.js</b> and
               <i>
                 <b className="purple">
@@ -56,10 +55,10 @@ function Home2() {
             </p>
           </Col>
           <Col
-            md={4}
+            md={3}
             className="myAvtar"
             data-aos="fade-down"
-            style={{ marginTop: "-32px" }}
+            style={{ marginTop: "-28px"}}
           >
             <Tilt>
               <img
@@ -79,7 +78,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/Avinash7564"
+                  href="https://github.com/abhishekmah"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -89,7 +88,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/honest_Coder"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -99,7 +98,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/avinash-kumar-20a359211/"
+                  href="https://www.linkedin.com/in/abhishek-mahato123/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -111,12 +110,12 @@ function Home2() {
             <h3>
               Contact No:
               <p
-                href="tel:+9356667630"
+                href=""
                 style={{
                   color: "purple",
                 }}
               >
-                +917564895139
+                +91 7908428955
               </p>
             </h3>
             <br /> <br />
