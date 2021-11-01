@@ -6,6 +6,7 @@ import Particle from "../Particle";
 import chatify from "../../Assets/Projects/hotel.png";
 import leaf from "../../Assets/Projects/angel.png";
 import editor from "../../Assets/Projects/glamm.png";
+import tumblr from "../../Assets/Projects/tumblr.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 function Projects() {
@@ -26,13 +27,13 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={5} className="project-card" data-aos="fade-down">
             <ProjectCard
-              imgPath={editor}
+              imgPath={tumblr}
               isBlog={false}
-              title="My Glamm Clone"
-              description="MyGlamm is a direct-to-consumer beauty brand that offers an online beauty products marketplace."
-              link="https://github.com/tauseef-stack/myGlamm"
-              linkmedium="https://medium.com/@mahatoabhishek123/myglamm-com-a-cloned-version-703f06e7e9cf"
-              linklive="https://myglammclone.netlify.app"
+              title="Tumblr Clone"
+              description="Tumblr is an American microblogging and social networking website founded in 2007."
+              link="https://github.com/abhishekmah/Tumblr-Project"
+              linkmedium="https://medium.com/@mahatoabhishek123/tumblr-com-a-cloned-version-49e9d2391dca"
+              linklive="https://tumblrclone.netlify.app/"
             />
           </Col>
           
