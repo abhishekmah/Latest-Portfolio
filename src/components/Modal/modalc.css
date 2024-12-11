@@ -3,6 +3,10 @@
   height: 40px;
   margin-top: 20px;
   border: 1px solid gray;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
 }
 .input-nilp:focus {
   width: 60%;
@@ -16,6 +20,10 @@
   height: 80px;
   margin-top: 20px;
   border: 1px solid gray;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
 }
 .input-nilp2:focus {
   width: 60%;

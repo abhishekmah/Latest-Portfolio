@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Resumecontent from "./ResumeContent";
 import axios from "axios";
-import pdf from "../../Assets/ABHISHEK_MAHATO  Resume.pdf";
+import pdf from "../../Assets/abhishek_mahato_resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -53,7 +53,7 @@ function Resume() {
               title="TATA STEEL, Jamshedpur"
               date="June 2020"
               content={[
-                "Slag Granulation Tank Project & Undergone fieldwork at blast furnace",
+                "Worked with the Frontend Development team of TATA STEEL, was envolved in the development of the main website mentioned below",
               ]}
             />
             <h3 className="resume-title">Voluntary Experience</h3>
@@ -75,7 +75,7 @@ function Resume() {
             <br/>
             <br/>
             <Resumecontent
-              title=" B.Tech MECHANICAL ENGINEERING [ Haldia Institute of Technology, West Bengal ] "
+              title=" B.Tech CSE [ Haldia Institute of Technology, West Bengal ] "
               date="2016 - 2020"
               content={["CGPA: 7.4"]}
             />

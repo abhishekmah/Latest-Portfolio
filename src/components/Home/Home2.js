@@ -30,6 +30,20 @@ function Home2() {
               </i>
               <br />
               <br />
+              I also love developing products
+              with <b className="purple">Node.js</b> and
+              <i>
+                <b className="purple">
+                  {" "}
+                  Modern Javascript Library and Frameworks
+                </b>
+              </i>
+              &nbsp; like
+              <i>
+                <b className="purple"> ReactJs, Angular, NextJs. </b>
+              </i>
+              <br />
+              <br />
               My field of Interest's are building new &nbsp;
               <i>
                 <b className="purple">Web Technologies and Products </b> and
@@ -40,18 +54,6 @@ function Home2() {
               </i>
               <br />
               <br />
-              Whenever possible, I also love developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js </b>
-              </i>
             </p>
           </Col>
           <Col
@@ -98,7 +100,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/abhishek-mahato123/"
+                  href="https://www.linkedin.com/in/abhishekmah/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -115,7 +117,7 @@ function Home2() {
                   color: "purple",
                 }}
               >
-                +91 7908428955
+                +91 7098822766
               </p>
             </h3>
             <br /> <br />

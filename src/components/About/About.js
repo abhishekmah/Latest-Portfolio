@@ -60,9 +60,9 @@ function About() {
         <div data-aos="fade-up">
           <Toolstack />
         </div>
-        <div data-aos="fade-right">
+        {/* <div data-aos="fade-right">
           <Github />
-        </div>
+        </div> */}
       </Container>
     </Container>
   );

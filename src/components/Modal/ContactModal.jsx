@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Fade from "@material-ui/core/Fade";
 import { makeStyles, Modal } from "@material-ui/core";
-import { useForm } from "@formcarry/react";
+import { useForm, Controller } from "react-hook-form";
+import { useForm as useFormCarry } from "@formcarry/react";
 import "./modalc.css";
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -22,6 +24,12 @@ const useStyles = makeStyles((theme) => ({
 export default function TransitionsModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
+
+  useEffect(() => {
+    emailjs.init('wl9-Sym5InwSTlrQH');
+  }, []);
 
   const handleOpen = () => {
     setOpen(true);
@@ -30,97 +38,134 @@ export default function TransitionsModal() {
   const handleClose = () => {
     setOpen(false);
   };
-  // Call the `useForm` hook in your function component
-  const { state, submit } = useForm({
-    id: "u4dXKk5fNNv",
+
+  const { handleSubmit, control, reset } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
   });
 
-  // Success message
-  if (state.submitted) {
-    return (
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <form onSubmit={submit}>
+  const onSubmit = (data) => {
+    setIsError(false);
+    let templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      message: data.message
+    };
+    
+    emailjs.send('service_6ruq5yf', 'template_ol1brze', templateParams)
+    .then(function (response) {
+      setIsSubmitted(true);
+      reset();
+    }, function (error) {
+      setIsSubmitted(true);
+      if (error.response && error.response.status === 400) {
+        setIsError(true);
+        // console.error('Bad Request:', error);
+      } else {
+        setIsError(true);
+        // console.error('FAILED...', error);
+      }
+      reset();
+    });
+  };
+
+  return (
+    <>
+      {isSubmitted ? (
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classes.modal}
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropProps={{ timeout: 500 }}
+        >
+          <Fade in={open}>
             <div className={classes.paper} style={{ textAlign: "Center" }}>
               <div style={{ color: "red" }}>
-                Thank you! We received your submission.
-              </div>
-              <div></div>
-            </div>
-          </form>
-        </Fade>
-      </Modal>
-    );
-  }
-  return (
-    <div>
-      <Button
-        variant="primary"
-        target="_blank"
-        data-aos="fade-down"
-        onClick={handleOpen}
-        style={{ marginTop: "-20px" }}
-      >
-        Click To Send Messege
-      </Button>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <form onSubmit={submit}>
-            <div className={classes.paper} style={{ textAlign: "Center" }}>
-              <h2 id="transition-modal-title" style={{ color: "white" }}>
-                Send Messege
-              </h2>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Write Your Name"
-                  className="input-nilp"
-                  required
-                />
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Write Your Email"
-                  className="input-nilp"
-                  required
-                />
-                <textarea
-                  id="message"
-                  placeholder="Write here..."
-                  name="message"
-                  className="input-nilp2"
-                  required
-                />
-                <br /> <br />
-                <Button type="submit" style={{ width: "60%" }}>
-                  SEND
-                </Button>
+                {isError ? "Sorry! Unable to send the message at the moment. Please try again later." : "Thank you! I received your message."}
               </div>
             </div>
-          </form>
-        </Fade>
-      </Modal>
-    </div>
+          </Fade>
+        </Modal>
+      ) : (
+        <div>
+          <Button
+            variant="primary"
+            target="_blank"
+            data-aos="fade-down"
+            onClick={handleOpen}
+            style={{ marginTop: "-20px" }}
+          >
+            Click To Send Message
+          </Button>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropProps={{ timeout: 500 }}
+          >
+            <Fade in={open}>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className={classes.paper} style={{ textAlign: "center" }}>
+                  <h2 id="transition-modal-title" style={{ color: "white" }}>
+                    Send Message
+                  </h2>
+                  <Controller
+                    name="name"
+                    control={control}
+                    render={({ field }) => (
+                      <input
+                        type="text"
+                        placeholder="Write Your Name"
+                        className="input-nilp"
+                        {...field}
+                        required
+                      />
+                    )}
+                  />
+                  <Controller
+                    name="email"
+                    control={control}
+                    render={({ field }) => (
+                      <input
+                        type="email"
+                        placeholder="Write Your Email"
+                        className="input-nilp"
+                        {...field}
+                        required
+                      />
+                    )}
+                  />
+                  <Controller
+                    name="message"
+                    control={control}
+                    render={({ field }) => (
+                      <textarea
+                        placeholder="Write here..."
+                        className="input-nilp2"
+                        {...field}
+                        required
+                      />
+                    )}
+                  />
+                  <br /><br />
+                  <Button type="submit" style={{ width: "60%" }}>
+                    SEND
+                  </Button>
+                </div>
+              </form>
+            </Fade>
+          </Modal>
+        </div>
+      )}
+    </>
   );
 }

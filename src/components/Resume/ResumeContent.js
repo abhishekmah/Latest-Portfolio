@@ -14,6 +14,13 @@ function ResumeContent(props) {
           <li key={index}> ‣ {value}</li>
         ))}
       </ul>
+
+      {
+        props?.title == 'TATA STEEL, Jamshedpur' &&
+        <a href="https://www.tatasteel.com/" style={{ color: "white" }} target="_blank" rel="noopener noreferrer">
+          TATA STEEL WEBSITE
+        </a>
+      }
     </div>
   );
 }
