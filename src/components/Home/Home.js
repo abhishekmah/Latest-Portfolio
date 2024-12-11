@@ -36,9 +36,9 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }} data-aos="fade-right">
+            <Col md={5} style={{ paddingBottom: 2, display: 'flex', justifyContent: 'center' }} data-aos="fade-right">
               <Tilt>
-                <img src={avatarImg} alt="home pic" style={{width: '350px', marginTop: '-50px'}} />
+                <img src={avatarImg} alt="home pic" style={{width: '350px', marginTop: '-35px'}} />
               </Tilt>
             </Col>
           </Row>

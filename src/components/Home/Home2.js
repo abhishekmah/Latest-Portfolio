@@ -58,7 +58,6 @@ function Home2() {
             md={3}
             className="myAvtar"
             data-aos="fade-down"
-            style={{marginLeft: '40px'}}
           >
             <img
               src={homeLogo}
