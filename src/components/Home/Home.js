@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-
+import avatarImg from "../../Assets/abhi.png"
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Tilt from "react-parallax-tilt";
+
 function Home() {
   useEffect(() => {
     Aos.init({ duration: 1200 });
@@ -36,7 +37,9 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }} data-aos="fade-right">
-              <img src={homeLogo} alt="home pic" className="img-fluid" />
+              <Tilt>
+                <img src={avatarImg} alt="home pic" style={{width: '350px', marginTop: '-50px'}} />
+              </Tilt>
             </Col>
           </Row>
         </Container>

@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
-import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
-
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaLinkedinIn } from "react-icons/fa";
 import TransitionsModal from "../Modal/ContactModal.jsx";
-import avatarImg from "../../Assets/abhi.jpg"
+import homeLogo from "../../Assets/home-main.svg"
+
 function Home2() {
   useEffect(() => {
     Aos.init({ duration: 1200 });
@@ -60,15 +58,13 @@ function Home2() {
             md={3}
             className="myAvtar"
             data-aos="fade-down"
-            style={{ marginTop: "-28px"}}
+            style={{marginLeft: '40px'}}
           >
-            <Tilt>
-              <img
-                src={avatarImg}
-                className="img-fluid"
-                alt="avatar"
-              />
-            </Tilt>
+            <img
+              src={homeLogo}
+              width={350}
+              alt="avatar"
+            />
           </Col>
         </Row>
         <Row>
