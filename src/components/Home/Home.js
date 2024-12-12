@@ -7,6 +7,7 @@ import avatarImg from "../../Assets/abhi.png"
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Tilt from "react-parallax-tilt";
+import TransitionsModal from "../Modal/ContactModal";
 
 function Home() {
   useEffect(() => {
@@ -36,10 +37,16 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 2, display: 'flex', justifyContent: 'center' }} data-aos="fade-right">
-              <Tilt>
-                <img src={avatarImg} alt="home pic" style={{width: '350px', marginTop: '-35px'}} />
-              </Tilt>
+            <Col md={5} className="flex-center" style={{ paddingBottom: 2 }}>
+              <div>
+                <Tilt>
+                  <img src={avatarImg} alt="home pic" style={{width: '350px', marginTop: '-35px'}} />
+                </Tilt>
+
+                <div className="email-btn flex-center">
+                  <TransitionsModal />
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>

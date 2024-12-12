@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button";
 import Fade from "@material-ui/core/Fade";
 import { makeStyles, Modal } from "@material-ui/core";
 import { useForm, Controller } from "react-hook-form";
-import { useForm as useFormCarry } from "@formcarry/react";
 import "./modalc.css";
 import emailjs from 'emailjs-com';
 
@@ -63,10 +62,8 @@ export default function TransitionsModal() {
       setIsSubmitted(true);
       if (error.response && error.response.status === 400) {
         setIsError(true);
-        // console.error('Bad Request:', error);
       } else {
         setIsError(true);
-        // console.error('FAILED...', error);
       }
       reset();
     });
@@ -101,7 +98,7 @@ export default function TransitionsModal() {
             onClick={handleOpen}
             style={{ marginTop: "-20px" }}
           >
-            Click To Send Message
+            Get in Touch via Email
           </Button>
           <Modal
             aria-labelledby="transition-modal-title"
@@ -116,7 +113,7 @@ export default function TransitionsModal() {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.paper} style={{ textAlign: "center" }}>
                   <h2 id="transition-modal-title" style={{ color: "white" }}>
-                    Send Message
+                    Send Email
                   </h2>
                   <Controller
                     name="name"
