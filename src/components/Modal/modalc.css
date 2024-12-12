@@ -1,4 +1,19 @@
-.input-nilp, .input-nilp:focus {
+.input-nilp {
+  width: 60%;
+  height: 40px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+.input-nilp:focus {
   width: 60%;
   height: 40px;
   margin-top: 20px;
@@ -14,7 +29,22 @@
   }
 }
 
-.input-nilp2, .input-nilp2:focus {
+.input-nilp2 {
+  width: 60%;
+  height: 80px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+.input-nilp2:focus {
   width: 60%;
   height: 80px;
   margin-top: 20px;
